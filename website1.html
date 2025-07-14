@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <style>
+        body{
+            width: 100%;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .search {
+            height: 40px;
+            width: 80%;
+            border-radius: 60px;
+            margin-left: -35px;
+            outline: none;
+            border: 2px solid rgb(221, 52, 80);
+
+        }
+
+        .btn0 {
+            height: 40px;
+            width: 40%;
+            outline: none;
+            border: none;
+            background-color: rgb(209, 14, 47);
+            color: white;
+            border-radius: 60px;
+            margin-left: -35px;
+            font-weight: 700;
+            text-align: center;
+
+        }
+
+        .btn0:hover {
+            color: white;
+            background-color: green;
+            transition-duration: 0.5s;
+        }
+
+        .main {
+            background: url(https://as1.ftcdn.net/v2/jpg/13/82/84/92/1000_F_1382849248_D1ptqovO7TDs62rid66pBCm1eOk4EiUX.jpg)no-repeat;
+            height: 100vh;
+            width: 100%;
+            background-position: 50% 50%;
+            background-size: cover;
+        }
+
+        .main h1 {
+            font-size: 4rem;
+            font-weight: 700;
+        }
+
+        .btn1 {
+            width: 30%;
+            height: 40px;
+            border-radius: 60px;
+            font-weight: 700;
+        }
+        .product h1{
+            font-weight: 700;
+            font-size: 3rem;
+        }
+        .product1:hover{
+
+        }
+        .btn2{
+            width: 30%;
+            height: 40px;
+            border-radius: 60px;
+            font-weight: 700;
+        }
+         .btn3{
+            width: 15%;
+            height: 40px;
+            border-radius: 60px;
+            font-weight: 700;
+        }
+       .quality img{
+            background-color: aqua;
+            height: 300px;
+            width: 450px;
+            background-size: 100% 100%;
+        }
+
+        .dal:hover {
+            box-shadow: 5px 5px 10px gray;
+        }
+
+        .nutrition {
+            background: url(https://www.shutterstock.com/image-photo/happy-asian-indian-woman-long-260nw-2107526729.jpg)no-repeat;
+            height: 100vh;
+            width: 100%;
+            background-position: 50% 50%;
+            background-size: cover;
+            margin-top: 25px;
+            box-sizing: border-box;
+        }
+
+        .nutrition h1 {
+            font-size: 4rem;
+            font-weight: 700;
+        }
+
+        .info {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .footer {
+            background-color: black;
+        }
+
+        .footer_input {
+            background-color: black;
+            border: 2px solid white;
+          
+        }
+
+        .footer_search {
+            margin-left: 38%;
+
+        }
+        .icons
+        {
+            font-size: 25px;
+        }
+        .footer-line {
+    border-top: 1px solid #3e3a3a; 
+    width: 100%;
+
+}
+
+@media (max-width: 650px) {
+  .main h1,
+  .nutrition h1 {
+    font-size: 2rem;
+  }
+  .btn1,
+  .btn2 {
+    width: 60%;
+    margin: 10px auto;
+    display: block;
+  }
+  .search,
+  .btn0 {
+    width: 90%;
+    margin: 10px auto;
+  }
+  .footer_search {
+    margin-left: 5%;
+  }
+  .footer_input {
+    width: 100%;
+  }
+  
+  
+}
+
+/* Tablets and small laptops (651px - 949px) */
+@media (min-width: 651px) and (max-width: 949px) {
+  .main h1,
+  .nutrition h1 {
+    font-size: 3rem;
+  }
+  .btn1,
+  .btn2 {
+    width: 40%;
+  }
+  .search,
+  .btn0 {
+    width: 70%;
+  }
+  .footer_search {
+    margin-left: 20%;
+  }
+  .footer_input {
+    width: 80%;
+  }
+ 
+  .col-lg-4,
+  .col-lg-3,
+  .col-lg-6,
+  .col-lg-9 {
+    width: 100%;
+  }
+}
+
+/* Desktop and larger screens (min-width: 950px) */
+@media (min-width: 950px) {
+  .btn1 {
+    width: 30%;
+  }
+  .btn2 {
+    width: 15%;
+  }
+  .search {
+    width: 80%;
+  }
+  .btn0 {
+    width: 40%;
+  }
+  .footer_search {
+    margin-left: 38%;
+  }
+}
+
+
+       
+    </style>
+</head>
+
+<body>
+
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+        <a class="navbar-brand text-white h5" href="#">Navbar</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav m-auto">
+                <li class="nav-item active">
+                    <a class="nav-link text-white pr-5" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white pr-5" href="#">About</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle text-white pr-5" href="#" role="button" data-toggle="dropdown"
+                        aria-expanded="false">
+                        Dropdown
+                    </a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white pr-5">Services</a>
+                </li>
+            </ul>
+            <div class="d-flex my-2 my-lg-0">
+                <input class="form-control mr-sm-2 search" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn  my-2 my-sm-0 btn0" type="submit">Search</button>
+            </div>
+        </div>
+    </nav>
+
+    <section class="main">
+        <div class="container py-5">
+            <div class="row py-5 mt-5 text-center">
+                <div class="col-lg-7">
+                    <h1>Nature Has Always <br>cared For Us</h1>
+                    <a href="" class="btn btn1 btn-danger">More Tips</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section>
+        <div class="container py-5">
+            <div class="row ">
+                <div class="col-lg-9 m-auto">
+                    <div class="row">
+                        <div class="col-lg-4">
+
+                            <img src="/practice/download.png" class="img-fluid">
+                            <h6 class="text-center">NATURAL</h6>
+                        </div>
+                        <div class="col-lg-4">
+                            <img src="/practice/download.png" class="img-fluid">
+                            <h6 class="text-center">NATURAL</h6>
+                        </div>
+                        <div class="col-lg-4">
+                            <img src="/practice/download.png" class="img-fluid">
+                            <h6 class="text-center">NATURAL</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-5">
+        <div class="product text-center">
+            <h1>What's trending</h1>
+            <h6 class="text-danger">Be Healthy Organic Food</h6>
+        </div>
+        <section>
+        <div class="container py-5 ">
+            <div class="row ">
+                <div class="col-lg-9 m-auto">
+                    <div class="row">
+                        <div class="col-lg-3 dal pb-3 pt-3">
+
+                            <img src="https://images-eu.ssl-images-amazon.com/images/I/61Jz5LNnU4L.AC_SL240_.jpg"
+                                class="img-fluid">
+                            <h6 class="text-center">organic</h6>
+                            <h6 class="text-center text-secondary">$500</h6>
+                        </div>
+                        <div class="col-lg-3 dal pb-3 pt-3 ">
+                            <img src="https://images-eu.ssl-images-amazon.com/images/I/61jExIXx83L.AC_SL300_.jpg"
+                                class="img-fluid">
+                            <h6 class="text-center">organic</h6>
+                            <h6 class="text-center text-secondary">$500</h6>
+                        </div>
+                        <div class="col-lg-3 dal pb-3 pt-3">
+                            <img src="https://images-eu.ssl-images-amazon.com/images/I/71OexQTz4-L.AC_SL240_.jpg"
+                                class="img-fluid">
+                            <h6 class="text-center">organic</h6>
+                            <h6 class="text-center text-secondary">$500</h6>
+                        </div>
+                        <div class="col-lg-3 dal pb-3 pt-3">
+                            <img src="https://images-eu.ssl-images-amazon.com/images/I/81M6T+PF-iL.AC_SL300_.jpg"
+                                class="img-fluid">
+                            <h6 class="text-center">organic</h6>
+                            <h6 class="text-center text-secondary">$500</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+         <div class="text-center py-3">
+                <button class="btn btn-danger btn2">click for more</button>
+            </div>
+    </section>
+
+     <section class="nutrition">
+        <div class="container py-5">
+            <div class="row py-5 mt-5">
+                <div class="col-lg-7">
+                    <h1 class="text-white">Unlock your potential with good <br>nutrition</h1>
+                    <h6 class="text-white">always get good food</h6>
+                    <a href="" class="btn btn1 btn-danger">More From us</a>
+                </div>
+            </div>
+        </div>
+    </section>
+        
+    <section class="info py-5">
+        <div class="header text-center">
+            <h1>Welcome To Our Organic Food Society</h1>
+            <h6 class="text-danger">Be Healty Organic Food</h6>
+        </div>
+        <div class="quality row m-auto">
+            <div class="col-lg-4">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTu3PtGo40sB3BRkKm_AaqV1O6uY-5qgZgPSak2nLTOviht_P19zCboPhk4mcYPgZJaz6M&usqp=CAU" alt="">
+                <h5>Best Quality Product</h5>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Mollitia tenetur obcaecati delectus quod, illum perspiciatis veritatis esse totam, iste sequi dolor vero est veniam modi non possimus dicta natus error.</p>
+            </div>
+              <div class="col-lg-4">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWZb6WNDFFVGWdjEnR1N4NxXAdx81bKrgc7w&s" alt="">
+                <h5>Best Quality Product</h5>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Mollitia tenetur obcaecati delectus quod, illum perspiciatis veritatis esse totam, iste sequi dolor vero est veniam modi non possimus dicta natus error.</p>
+            </div>
+              <div class="col-lg-4">
+                <img src="/practice/sho.jpeg" alt="">
+                <h5>Best Quality Product</h5>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Mollitia tenetur obcaecati delectus quod, illum perspiciatis veritatis esse totam, iste sequi dolor vero est veniam modi non possimus dicta natus error.</p>
+            </div>
+        </div>
+        <div class="text-center py-3">
+                <button class="btn btn-danger btn3">submit</button>
+        </div>
+    </section>
+
+
+
+     <div>
+        <h1 class="text-center mt-5"> Contact Us</h1>
+        <h6 class="text-center text-danger">Always Be Touch With Us</h6>
+    </div>
+
+    <section>
+        <div class="container py-5">
+            <div class="row ">
+                <div class="col-lg-9 m-auto">
+                    <div class="row">
+                        <div class="col-lg-6 info">
+                            <div class="box">
+                                <h6>Location</h6>
+                                <p class="text-secondary">India,Nashik</p>
+                            </div>
+                            <div class="box">
+                                <h6>Phone</h6>
+                                <p class="text-secondary">+918468941024</p>
+                            </div>
+                            <div class="box">
+                                <h6>Email</h6>
+                                <p class="text-secondary">nikupatil080406@gmail.com</p>
+                            </div>
+
+                        </div>
+                        <div class="col-lg-6">
+                            <form>
+                                <div class="form-group">
+                                    <input type="email" class="form-control" id="exampleInputEmail1"
+                                        aria-describedby="emailHelp" placeholder="Enter Name">
+                                </div>
+                                <div class="form-group">
+
+                                    <input type="email" class="form-control" id="exampleInputEmail1"
+                                        aria-describedby="emailHelp" placeholder=" Enter your email">
+                                </div>
+                                <div class="form-group">
+                                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"
+                                        placeholder="Enter Message"></textarea>
+                                </div>
+
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+         <div class="text-center py-4">
+                <button class="btn btn-danger btn3">submit</button>
+        </div>
+    </section>
+
+    <section class="footer mt-5">
+        <h1 class="text-white text-center pt-3">Join secret Society</h1>
+
+        <div class="input-group footer_search mt-5">
+            <div class="form-outline text-center" data-mdb-input-init>
+                <input id="search-input " type="search" id="form1" class="form-control footer_input"
+                    placeholder="Enter mail" />
+
+            </div>
+            <button id="search-button" type="button" class="btn btn-light">
+                Submit
+            </button>
+        </div>
+        <div class="container py-5 ">
+            <div class="row ">
+                <div class="col-lg-9 m-auto">
+                    <div class="row">
+
+                        <div class="col-lg-3">
+                            <div class="box">
+                                <h6 class="text-light">Customer Care</h6>
+                                <p class="text-secondary">Regular</p>
+                                <p class="text-secondary">On-Time</p>
+                                <p class="text-secondary">Always</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-3">
+                              <h6 class="text-light">Customer Care</h6>
+                                <p class="text-secondary">Regular</p>
+                                <p class="text-secondary">On-Time</p>
+                                <p class="text-secondary">Always</p>
+                        </div>
+                        <div class="col-lg-3">
+                             <h6 class="text-light">Customer Care</h6>
+                                <p class="text-secondary">Regular</p>
+                                <p class="text-secondary">On-Time</p>
+                                <p class="text-secondary">Always</p>
+                        </div>
+                         <div class="col-lg-3">
+                             <h6 class="text-light">Customer Care</h6>
+                               <i class="fa-brands fa-facebook icons text-light "></i>
+                               <i class="fa-brands fa-instagram icons text-light pl-2"></i>
+                              
+                               <i class="fa-brands fa-twitter icons text-light  pl-2"></i>
+                               <i class="fa-brands fa-google icons text-light  pl-2"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+      <hr class="footer-line">
+
+        <p class="text-center text-light pt-2 pb-5">copyrights @2025 All Rights Reserves | This Template Made With bootstrap</p>
+    </section>
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
